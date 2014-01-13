@@ -1,1 +1,7 @@
-%h3 Home
+%h3 Kaiwa Deck
+- Card.all.each do |card|
+	.deck_name
+		= card.deck.name
+	.card_text
+		= card.text
+	%br

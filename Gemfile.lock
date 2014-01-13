@@ -180,6 +180,7 @@ DEPENDENCIES
   figaro
   guard-bundler
   guard-rails
+  haml
   haml-rails
   high_voltage
   html2haml
