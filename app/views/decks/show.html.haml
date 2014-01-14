@@ -1,13 +1,36 @@
-- @cards.each do |card|
-	.text-box
-		%a{:id=>card.id}
-		.text
-			= card.text
-		.arrow
-			%a.btn.btn-default.btn-lg{:href=>"#" + (card.id - 1).to_s,:type=>"button"}
-				%span.glyphicon.glyphicon-arrow-left
+:javascript
+	window.cardArray = #{raw @cards.to_json}
+	var count = 0;
+	var nextCard = (function() {
+		return function() {
+		return cardArray[++count % cardArray.length].text;
+		}
+	}());
+	var previousCard = (function() {
+		return function() {
+		return cardArray[--count % cardArray.length].text;
+		}
+	}());
 
-			%a.btn.btn-default.btn-lg{:href=>"#" + (card.id + 1).to_s,:type=>"button"}
-				%span.glyphicon.glyphicon-arrow-right
-.text
-	%p The End
+
+-# - @cards.each do |card|
+-# 	.text-box
+-# 		%a{:id=>card.id}
+-# 		.text
+-# 			= card.text
+-# 		.arrow
+-# 			%a.btn.btn-default.btn-lg{:href=>"#" + (card.id - 1).to_s,:type=>"button"}
+-# 				%span.glyphicon.glyphicon-arrow-left
+
+-# 			%a.btn.btn-default.btn-lg{:href=>"#" + (card.id + 1).to_s,:type=>"button"}
+-# 				%span.glyphicon.glyphicon-arrow-right
+-# .text
+-# 	%p The End
+
+#text
+	= @cards.first.text
+.arrow
+	%a.btn.btn-default.btn-lg{:type=>"button", :id => "alert", onclick: "\r\n  document.getElementById('text').innerHTML = nextCard();\r\n"}
+		%span.glyphicon.glyphicon-arrow-left
+	%a.btn.btn-default.btn-lg{:type=>"button", :id => "alert", onclick: "\r\n  document.getElementById('text').innerHTML = nextCard();\r\n"}
+		%span.glyphicon.glyphicon-arrow-right
