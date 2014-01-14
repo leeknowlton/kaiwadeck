@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
+//= require fastclick
 //= require turbolinks
 //= require bootstrap
 //= require_tree .

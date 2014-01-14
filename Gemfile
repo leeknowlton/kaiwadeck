@@ -14,6 +14,7 @@ gem 'haml-rails'
 gem 'high_voltage'
 gem 'simple_form'
 gem 'faker'
+gem 'fastclick-rails'
 
 group :development do
   gem 'sqlite3'

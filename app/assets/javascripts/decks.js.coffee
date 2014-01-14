@@ -3,6 +3,9 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $ ->
+	new FastClick(document.body)
+
+$ ->
 	c = 0
 	n = cardArray.length
 	$("#nextCard, #previousCard").click (e) ->
