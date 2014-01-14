@@ -1,3 +1,4 @@
 Kaiwadeck::Application.routes.draw do
-  root :to => 'visitors#new'
+  root :to => 'decks#index'
+  resources :decks
 end

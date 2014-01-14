@@ -43,3 +43,20 @@ section {
   @extend .row;
   margin-top: 20px;
   }
+
+.text{
+  text-align: center;
+  padding-top: 15%;
+  font-size: 500%;
+}
+
+.arrow{
+    text-align: center;
+  span.glyphicon-arrow-left {
+      font-size: 400%;
+  }
+  span.glyphicon-arrow-right {
+      font-size: 400%;
+  }
+
+}
