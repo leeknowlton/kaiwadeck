@@ -3,6 +3,6 @@ class DecksController < ApplicationController
 	end
 
 	def show
-		@cards = Card.where(deck_id: params[:id]).shuffle
+		@cards = Card.where(deck_id: params[:id])	
 	end
 end

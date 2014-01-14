@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.1.0'
 gem 'rails', '4.0.2'
-gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -14,7 +13,9 @@ gem 'haml-rails'
 gem 'high_voltage'
 gem 'simple_form'
 gem 'faker'
+
 group :development do
+  gem 'sqlite3'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
   gem 'guard-bundler'
@@ -26,4 +27,9 @@ group :development do
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
   gem 'rspec-rails', '~> 3.0.0.beta'
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
 end
