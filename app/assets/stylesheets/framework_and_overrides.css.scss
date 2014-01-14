@@ -50,6 +50,9 @@ section {
   font-size: 500%;
 }
 
+.text-box{
+  page-break-after: always;
+}
 .arrow{
     text-align: center;
   span.glyphicon-arrow-left {
