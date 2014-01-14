@@ -1,36 +1,22 @@
 :javascript
-	window.cardArray = #{raw @cards.to_json}
-	var count = 0;
-	var nextCard = (function() {
-		return function() {
-		return cardArray[++count % cardArray.length].text;
-		}
-	}());
-	var previousCard = (function() {
-		return function() {
-		return cardArray[--count % cardArray.length].text;
-		}
-	}());
+	window.cardArray = #{raw @cards.to_json};
+	var c = 0,
+	    n = cardArray.length;
 
+	$('#nextCard, #previousCard').click(function( e ){
+	    e.preventDefault(); 
+	    c = this.id=='nextCard' ? ++c : --c;
+	    c = c<0? n-1 : c%n ;
+	  
+	    $('#text').text(cardArray[c].text);
+	    //$('iframe')[0].src = cardArray[c].text;
+	}); 
 
--# - @cards.each do |card|
--# 	.text-box
--# 		%a{:id=>card.id}
--# 		.text
--# 			= card.text
--# 		.arrow
--# 			%a.btn.btn-default.btn-lg{:href=>"#" + (card.id - 1).to_s,:type=>"button"}
--# 				%span.glyphicon.glyphicon-arrow-left
-
--# 			%a.btn.btn-default.btn-lg{:href=>"#" + (card.id + 1).to_s,:type=>"button"}
--# 				%span.glyphicon.glyphicon-arrow-right
--# .text
--# 	%p The End
-
-#text
-	= @cards.first.text
-.arrow
-	%a.btn.btn-default.btn-lg{:type=>"button", :id => "alert", onclick: "\r\n  document.getElementById('text').innerHTML = nextCard();\r\n"}
-		%span.glyphicon.glyphicon-arrow-left
-	%a.btn.btn-default.btn-lg{:type=>"button", :id => "alert", onclick: "\r\n  document.getElementById('text').innerHTML = nextCard();\r\n"}
-		%span.glyphicon.glyphicon-arrow-right
+.textbox
+	#text
+		= @cards.first.text
+	.arrow
+		%a.btn.btn-default.btn-lg{:href =>"#", :type=>"button", :id => "previousCard"}
+			%span.glyphicon.glyphicon-arrow-left
+		%a.btn.btn-default.btn-lg{:href =>"#", :type=>"button", :id => "nextCard"}
+			%span.glyphicon.glyphicon-arrow-right
