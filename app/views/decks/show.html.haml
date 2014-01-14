@@ -1,0 +1,13 @@
+- @cards.each do |card|
+	.text-box
+		%a{:id=>card.id}
+		.text
+			= card.text
+		.arrow
+			%a.btn.btn-default.btn-lg{:href=>"#" + (card.id - 1).to_s,:type=>"button"}
+				%span.glyphicon.glyphicon-arrow-left
+
+			%a.btn.btn-default.btn-lg{:href=>"#" + (card.id + 1).to_s,:type=>"button"}
+				%span.glyphicon.glyphicon-arrow-right
+.text
+	%p The End

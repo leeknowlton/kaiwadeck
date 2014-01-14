@@ -1,0 +1,6 @@
+%h3 All Decks 
+%p Try a sample deck
+- Deck.all.each do |deck|
+	.deck_name
+		= link_to deck.name, deck_path(deck)
+	%br
