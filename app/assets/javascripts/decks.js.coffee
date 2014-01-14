@@ -2,6 +2,16 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+$ ->
+	c = 0
+	n = cardArray.length
+	$("#nextCard, #previousCard").click (e) ->
+	  e.preventDefault()
+	  c = (if @id is "nextCard" then ++c else --c)
+	  c = (if c < 0 then n - 1 else c % n)
+	  $("#text").text cardArray[c].text
+
+	#$('iframe')[0].src = cardArray[c].text;
 
 paintIt = (element, backgroundColor, textColor) ->
   element.style.backgroundColor = backgroundColor
