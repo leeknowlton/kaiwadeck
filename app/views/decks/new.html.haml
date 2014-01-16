@@ -1,0 +1,8 @@
+- setup_deck_cards
+%h1 Create a New Deck
+= simple_form_for @deck do |f|
+	= f.input :name
+	%h4 One Question/Prompt Per Line:
+	= f.simple_fields_for :cards do |c|
+		= c.input :text, as: :text, :input_html => {:rows => 10}
+	= f.button :submit

@@ -5,7 +5,6 @@
 $ ->
  	new FastClick(document.body)
 
-
 $ ->
 	c = 0
 	n = cardArray.length
@@ -14,8 +13,6 @@ $ ->
 	  c = (if @id is "nextCard" then ++c else --c)
 	  c = (if c < 0 then n - 1 else c % n)
 	  $("#text").text cardArray[c].text
-
-	#$('iframe')[0].src = cardArray[c].text;
 
 paintIt = (element, backgroundColor, textColor) ->
   element.style.backgroundColor = backgroundColor
