@@ -29,6 +29,8 @@ group :development do
   gem 'rb-fsevent', :require=>false
   gem 'rb-inotify', :require=>false
   gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'rspec-its'
+  gem 'factory_girl_rails'
 end
 
 group :production do

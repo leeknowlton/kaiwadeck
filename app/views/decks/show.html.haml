@@ -1,7 +1,7 @@
 :javascript
 	window.cardArray = #{raw @cards.to_json};
 
-#text
+#card
 	= @cards.first
 .arrow
 	%a.btn.btn-default.btn-lg{:href =>"#", :id => "previousCard"}

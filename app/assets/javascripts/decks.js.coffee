@@ -12,7 +12,7 @@ $ ->
 	  e.preventDefault()
 	  c = (if @id is "nextCard" then ++c else --c)
 	  c = (if c < 0 then n - 1 else c % n)
-	  $("#text").text cardArray[c]
+	  $("#card").text cardArray[c]
 
 # paintIt = (element, backgroundColor, textColor) ->
 #   element.style.backgroundColor = backgroundColor
