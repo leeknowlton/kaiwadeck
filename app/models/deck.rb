@@ -1,6 +1,5 @@
 class Deck < ActiveRecord::Base
 	before_save :fix_card_array
-	before_update :fix_card_array
 	serialize :cards
 
 	def fix_card_array
