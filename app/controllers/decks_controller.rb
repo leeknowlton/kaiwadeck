@@ -1,9 +1,10 @@
 class DecksController < ApplicationController
+
 	def index
 	end
 
 	def show
-		@cards = Card.where(deck_id: params[:id])	
+		@cards = Deck.find(params[:id]).cards	
 	end
 
 	def new
@@ -11,21 +12,7 @@ class DecksController < ApplicationController
 	end
 
 	def create
-		
-		@deck = Deck.new(deck_params)
-		
-		@deck.cards.delete_all
-
-		card_array = Array.new
-		#split values into array, build new cards, delete first merged card
-		deck_params[:cards_attributes].values.each do |card|
-			card_array = card[:text].split("\r\n")
-		end
-
-		card_array.each do |text|
-			@deck.cards.build(deck_id: @deck.id, text: text)
-		end
-		
+		@deck = Deck.new(deck_params)		
 		if @deck.save
       		flash[:notice] = "New Deck Created!"
       		redirect_to decks_path
@@ -35,9 +22,18 @@ class DecksController < ApplicationController
 	end
 
 	def edit
+		@deck = Deck.find(params[:id])
+		@deck.cards = @deck.cards.join("\r\n")
 	end
 
 	def update
+		@deck = Deck.find(params[:id])
+		if @deck.update_attributes(deck_params)
+      		flash[:notice] = "Deck Updated!"
+      		redirect_to decks_path
+    	else
+      		render 'edit'
+    	end
 	end
 
 	def delete
@@ -45,6 +41,6 @@ class DecksController < ApplicationController
 
 	private 
 		def deck_params
-			params.require(:deck).permit(:name, :cards_attributes => [:id, :text, :deck_id])
+			params.require(:deck).permit(:name, :cards)
 		end
 end

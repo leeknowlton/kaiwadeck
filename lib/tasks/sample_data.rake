@@ -1,9 +1,6 @@
 namespace :db do
   desc "Fill database with sample data"
   task populate: :environment do
-    Deck.create!(name: "Easy")
-    Deck.create!(name: "Medium")
-    Deck.create!(name: "Hard")
 
     easy_cards = [
       "What's your favorite color?",
@@ -26,20 +23,24 @@ namespace :db do
       "What's your favorite movie? What makes it so memorable for you?"
     ]
 
-    easy_cards.length.times do |n|
-      Card.create!(text: easy_cards[n],
-                   deck_id: 1)
-    end
+    Deck.create!(name: "Easy", cards: easy_cards)
+    Deck.create!(name: "Medium", cards: medium_cards)
+    Deck.create!(name: "Hard", cards: hard_cards)
 
-    medium_cards.length.times do |n|
-      Card.create!(text: medium_cards[n],
-                   deck_id: 2)
-    end
+    # easy_cards.length.times do |n|
+    #   Card.create!(text: easy_cards[n],
+    #                deck_id: 1)
+    # end
 
-    hard_cards.length.times do |n|
-      Card.create!(text: hard_cards[n],
-                   deck_id: 3)
-    end
+    # medium_cards.length.times do |n|
+    #   Card.create!(text: medium_cards[n],
+    #                deck_id: 2)
+    # end
+
+    # hard_cards.length.times do |n|
+    #   Card.create!(text: hard_cards[n],
+    #                deck_id: 3)
+    # end
 
   end
 end

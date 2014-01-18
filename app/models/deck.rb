@@ -1,4 +1,10 @@
 class Deck < ActiveRecord::Base
-	has_many :cards, dependent: :destroy
-	accepts_nested_attributes_for :cards
+	before_save :fix_card_array
+	before_update :fix_card_array
+	serialize :cards
+
+	def fix_card_array
+	  self[:cards] = self[:cards].split("\r\n")
+	end
+
 end
