@@ -54,11 +54,34 @@ section {
 
 }
 
-.what-to-do{
-  vertical-align: center;
-  background: none repeat scroll 0% 0% rgb(244, 232, 211);
-  border: 1px solid rgb(242, 202, 192);
-  padding: 15px;
-  margin: 0px 0px 15px;
-  border-radius: 10px 10px 10px 10px;
+
+#dashboard{
+  #buttons{
+    text-align: center;
+  }
+  .what-to-do{
+    background: none repeat scroll 0% 0% rgb(244, 232, 211);
+    border: 1px solid rgb(242, 202, 192);
+    padding: 15px;
+    margin: 0px 0px 15px;
+    border-radius: 10px 10px 10px 10px;
+  }
+
+  .col-md-4{
+    background: none repeat scroll 0% 0% rgb(242, 242, 242);
+    margin-right: 20px;
+  }
+  .col-md-7{
+    background: none repeat scroll 0% 0% rgb(242, 242, 242);
+
+  }
 }
+
+.btn-xlg {
+    padding: 18px 28px;
+    font-size: 2em;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+    }

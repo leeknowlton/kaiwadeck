@@ -21,8 +21,15 @@ namespace :db do
       "Do you think the Nobel Peace Prize is fair?\r\n"\
       "What's your favorite movie? What makes it so memorable for you?"
 
-    Deck.create!(name: "Easy", cards: easy_cards)
-    Deck.create!(name: "Medium", cards: medium_cards)
-    Deck.create!(name: "Hard", cards: hard_cards)
+    used_to_deck =
+      "What club did you use to belong to in junior high school?\r\n"\
+      "Are there any foods you didn't used to like that you do now?\r\n"\
+      "What did you use to do in elementary school after school?"
+
+    User.create!(email: "lee@sample.com", password: "password", password_confirmation: "password")
+    Deck.create!(name: "Easy", cards: easy_cards, user_id: 0)
+    Deck.create!(name: "Medium", cards: medium_cards, user_id: 0)
+    Deck.create!(name: "Hard", cards: hard_cards, user_id: 0)
+    Deck.create!(name: "Sample User Deck", cards: used_to_deck, user_id: 1)
   end
 end
