@@ -8,21 +8,26 @@ img {
   }
 // override for the 'Home' navigation link
 
-
 .navbar{
   background-color: #E567B1;
   .navbar-brand {
-  font-weight: bold;
-  color: white;
+    font-weight: bold;
+    color: white;
+    &:hover{
+      color: black;
+    }
   }
 }
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
 // apply styles to HTML elements
 // to make views framework-neutral
 main {
   @extend .container;
-  // background-color: #eee;
   padding-bottom: 80px;
-  width: 80%;
   margin-top: 51px; // accommodate the navbar
   }
 section {
@@ -47,4 +52,13 @@ section {
       font-size: 600%;
   }
 
+}
+
+.what-to-do{
+  vertical-align: center;
+  background: none repeat scroll 0% 0% rgb(244, 232, 211);
+  border: 1px solid rgb(242, 202, 192);
+  padding: 15px;
+  margin: 0px 0px 15px;
+  border-radius: 10px 10px 10px 10px;
 }
