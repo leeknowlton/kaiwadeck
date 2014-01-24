@@ -15,6 +15,7 @@ gem 'high_voltage'
 gem 'simple_form'
 gem 'faker'
 gem 'fastclick-rails'
+gem 'devise'
 
 group :development do
   gem 'sqlite3'

@@ -1,1 +1,8 @@
 / add navigation links to this file 
+%li
+	= link_to "Your Home", "#"
+%li
+	= link_to "Settings", edit_user_registration_path(current_user)
+%ul.nav.navbar-nav.navbar-right
+	%li
+		= link_to 'Logout', destroy_user_session_path, :method=>'delete'

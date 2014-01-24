@@ -7,10 +7,15 @@ img {
   margin: 0 auto;
   }
 // override for the 'Home' navigation link
-.navbar-brand {
-  font-size: inherit;
-  }
 
+
+.navbar{
+  background-color: #E567B1;
+  .navbar-brand {
+  font-weight: bold;
+  color: white;
+  }
+}
 // apply styles to HTML elements
 // to make views framework-neutral
 main {
@@ -26,18 +31,20 @@ section {
   }
 
 #card{
+  padding-top: 1em;
   vertical-align: middle;
   text-align: center;
-  font-size: 500%;
+  font-size: 5em;
+  height: 4em;
 }
 
-.arrow{
+#arrows{
     text-align: center;
   span.glyphicon-arrow-left {
-      font-size: 400%;
+      font-size: 600%;
   }
   span.glyphicon-arrow-right {
-      font-size: 400%;
+      font-size: 600%;
   }
 
 }
