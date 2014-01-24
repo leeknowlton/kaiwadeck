@@ -5,7 +5,7 @@ Kaiwadeck::Application.routes.draw do
    root to: 'users#dashboard', as: :authenticated_root
   end
 
-  root :to => 'decks#index'
+  root :to => 'visitors#home'
   resources :decks
 
   get '/dashboard', to: 'users#dashboard', as: 'dashboard'

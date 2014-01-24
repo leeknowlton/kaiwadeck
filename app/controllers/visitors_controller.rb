@@ -1,6 +1,6 @@
 class VisitorsController < ApplicationController
 
-  def new
+  def home
   end
 
 end
