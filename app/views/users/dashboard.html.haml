@@ -24,7 +24,7 @@
 				= link_to "Edit", edit_deck_path(deck)
 				)
 		.col-md-7
-			%h2 Recently Created Decks
+			%h2 Recently Used Decks
 			- @user.decks.each do |deck|
 				= link_to "#{deck.name}", deck_path(deck)
 				(
