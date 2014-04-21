@@ -4,7 +4,7 @@ class DecksController < ApplicationController
 	end
 
 	def show
-		@cards = Deck.find(params[:id]).cards
+		@cards = Deck.find(params[:id]).cards.shuffle
 	end
 
 	def new
