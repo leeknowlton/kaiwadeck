@@ -9,4 +9,5 @@ Kaiwadeck::Application.routes.draw do
   resources :decks
 
   get '/dashboard', to: 'users#dashboard', as: 'dashboard'
+  get '/ktc', to: 'visitors#ktc', as: 'ktc'
 end
