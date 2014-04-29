@@ -2,44 +2,44 @@
 .text-center
 	.img-thumbnail
 		= image_tag("kaiwadeck-sample.png", size: "600")
-.row
-	.col-md-6.text-right
-		= link_to "Try Now!", new_user_registration_path, :class => 'btn btn-success btn-xlg'
-		%br
-		%small *No Hassle. No Downloads.
-	.col-md-6
-		-# TODO Update Path
-		= link_to "See Plans", new_user_registration_path, :class => 'btn btn-primary btn-xlg'
-		%br
-		%small *30 day money-back guarantee
-%h3.text-center 
-	Kaiwa Deck lets teachers create create custom conversation or discussion cards in minutes. 
-	%br
-	You can try it <strong> for free </strong> right now.
-%hr
-.row
-	.col-md-4
-		%h3 
-			.label.label-primary
-				Featured Conversation Decks
-		- @decks.each do |deck|
-			= link_to deck.name, deck_path(deck.id)
-			%br
+-# .row
+-# 	.col-md-6.text-right
+-# 		= link_to "Try Now!", new_user_registration_path, :class => 'btn btn-success btn-xlg'
+-# 		%br
+-# 		%small *No Hassle. No Downloads.
+-# 	.col-md-6
+-# 		-# TODO Update Path
+-# 		= link_to "See Plans", new_user_registration_path, :class => 'btn btn-primary btn-xlg'
+-# 		%br
+-# 		%small *30 day money-back guarantee
+-# %h3.text-center 
+-# 	Kaiwa Deck lets teachers create create custom conversation or discussion cards in minutes. 
+-# 	%br
+-# 	You can try it <strong> for free </strong> right now.
+-# %hr
+-# .row
+-# 	.col-md-4
+-# 		%h3 
+-# 			.label.label-primary
+-# 				Featured Conversation Decks
+-# 		- @decks.each do |deck|
+-# 			= link_to deck.name, deck_path(deck.id)
+-# 			%br
 
-	.col-md-7
-		%h3 
-			.label.label-primary
-				Less Work, More Fun and Educational Conversation Activities!
-		%p Kaiwa Deck lets you:
-		%p <strong> Save Time! </strong> You can create entire conversation card decks for an entire classroom on your normal computer in mere minutes. Writing cards by hand takes hours -- hours that you could better spend doing what you do best: teaching. Leave the busywork to the computer.
-		%p <strong> Save Money! </strong> Don't spend $10-$15 on buying single card decks from traditional publishers -- Kaiwa Deck can make an infinite number of activities! If you plan on using conversation decks three times or more in your teaching career it's much cheaper to use Kaiwa Deck!
-		%p <strong> Save Paper! </strong> Students can use their own iPhones and other smartphones, tablets, or computers to use Kaiwa Deck.
-		%p <strong>Tailor your activities!</strong> If you buy bingo sets from publishers, you're limited to what they have in stock.  If you make custom bingo cards yourself, you will always be able to match them directly to your lesson plan and students.  Try playing vocabulary bingo with vocabulary from the chapter you just finished reading, for example.
-		%p <strong>Keep your students interested in learning!</strong> Children and adults of all ages love playing bingo. We have a variety of ideas on how you can use this to teach, assess, and motivate.
-		%p <strong>Teach almost any subject!</strong> If you can type it on your computer, you can put it on a bingo card. Vocabulary lists, letters, numbers, math facts, social studies facts, student names great for first day jitters), famous people -- the choices are endless! See some examples of what we've done with this flexibility.
-		%p <strong>Never buy another set of conversation cards!</strong> We at Bingo Card Creator understand that budgets are tight. Accordingly, we will never charge you for an upgrade to the software. In addition, unlike some educational software companies our software can be used year after year without requiring additional license fees.  Bingo Card Creator is very affordable on any budget.
-		%p <strong>Buy with confidence.</strong> In addition to afree trial so you can see if Bingo Card Creator is exactly right foryou, we offer an unconditional 30 day money-back guarantee. If you'renot absolutely thrilled with our software, we don't deserve your money.
-		%p Kaiwa Deck works for Windows PCs and Macs. You can use it both at your home and school, and it saves your cards in one place. 
-		= link_to "Try Now!", new_user_registration_path, :class => 'btn btn-info btn-xlg'
-		%br 
-		%small Only 15 seconds to get started.
+-# 	.col-md-7
+-# 		%h3 
+-# 			.label.label-primary
+-# 				Less Work, More Fun and Educational Conversation Activities!
+-# 		%p Kaiwa Deck lets you:
+-# 		%p <strong> Save Time! </strong> You can create entire conversation card decks for an entire classroom on your normal computer in mere minutes. Writing cards by hand takes hours -- hours that you could better spend doing what you do best: teaching. Leave the busywork to the computer.
+-# 		%p <strong> Save Money! </strong> Don't spend $10-$15 on buying single card decks from traditional publishers -- Kaiwa Deck can make an infinite number of activities! If you plan on using conversation decks three times or more in your teaching career it's much cheaper to use Kaiwa Deck!
+-# 		%p <strong> Save Paper! </strong> Students can use their own iPhones and other smartphones, tablets, or computers to use Kaiwa Deck.
+-# 		%p <strong>Tailor your activities!</strong> If you buy bingo sets from publishers, you're limited to what they have in stock.  If you make custom bingo cards yourself, you will always be able to match them directly to your lesson plan and students.  Try playing vocabulary bingo with vocabulary from the chapter you just finished reading, for example.
+-# 		%p <strong>Keep your students interested in learning!</strong> Children and adults of all ages love playing bingo. We have a variety of ideas on how you can use this to teach, assess, and motivate.
+-# 		%p <strong>Teach almost any subject!</strong> If you can type it on your computer, you can put it on a bingo card. Vocabulary lists, letters, numbers, math facts, social studies facts, student names great for first day jitters), famous people -- the choices are endless! See some examples of what we've done with this flexibility.
+-# 		%p <strong>Never buy another set of conversation cards!</strong> We at Bingo Card Creator understand that budgets are tight. Accordingly, we will never charge you for an upgrade to the software. In addition, unlike some educational software companies our software can be used year after year without requiring additional license fees.  Bingo Card Creator is very affordable on any budget.
+-# 		%p <strong>Buy with confidence.</strong> In addition to afree trial so you can see if Bingo Card Creator is exactly right foryou, we offer an unconditional 30 day money-back guarantee. If you'renot absolutely thrilled with our software, we don't deserve your money.
+-# 		%p Kaiwa Deck works for Windows PCs and Macs. You can use it both at your home and school, and it saves your cards in one place. 
+-# 		= link_to "Try Now!", new_user_registration_path, :class => 'btn btn-info btn-xlg'
+-# 		%br 
+-# 		%small Only 15 seconds to get started.
