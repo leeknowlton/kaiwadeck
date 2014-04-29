@@ -1,4 +1,6 @@
-%p Click on the deck you want to use:
-- Deck.all.each do |deck|
-	.deck_name
-		= link_to deck.name, deck_path(deck)
+%h2 Click on the deck you want to use:
+%ul
+	- Deck.all.each do |deck|
+		.deck_name
+			%li
+				= link_to deck.name, deck_path(deck)
