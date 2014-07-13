@@ -6,34 +6,6 @@ img {
   @extend .img-responsive;
   margin: 0 auto;
   }
-// override for the 'Home' navigation link
-
-.navbar{
-  background-color: #E567B1;
-  .navbar-brand {
-    font-weight: bold;
-    color: white;
-    &:hover{
-      color: black;
-    }
-  }
-}
-
-.navbar-default .navbar-nav > li > a {
-    color: white;
-}
-
-// apply styles to HTML elements
-// to make views framework-neutral
-main {
-  @extend .container;
-  padding-bottom: 80px;
-  margin-top: 51px; // accommodate the navbar
-  }
-section {
-  @extend .row;
-  margin-top: 20px;
-  }
 
 #card{
   padding-top: 1em;
@@ -53,7 +25,6 @@ section {
   }
 
 }
-
 
 #dashboard{
   #buttons{

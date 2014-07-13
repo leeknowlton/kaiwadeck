@@ -10,10 +10,13 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery.turbolinks
-//= require jquery_ujs
-//= require fastclick
-//= require turbolinks
-//= require bootstrap
-//= require_tree .
+// = require jquery
+// = require jquery.turbolinks
+// = require jquery_ujs
+// = require fastclick
+// = require turbolinks
+// = require jquery.appear
+// = require jquery.easing
+// = require bootstrap
+// = require jquery.validate
+// = require_tree .
