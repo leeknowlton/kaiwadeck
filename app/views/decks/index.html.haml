@@ -1,9 +1,14 @@
-%h3 All Decks 
-%p Try a sample deck
-- Deck.all.each do |deck|
-	.deck_name
-		= link_to deck.name, deck_path(deck)
-		= link_to "(Edit)", edit_deck_path(deck)
-	%br
-
-= link_to "New Deck", new_deck_path 
+%section.page-top
+  .container
+    .row
+      .col-md-12
+        %h2 Create a New Deck
+.container
+  %h3 All Decks 
+  %p Try a sample deck
+  - Deck.all.each do |deck|
+    .deck_name
+      = link_to deck.name, deck_path(deck)
+      = link_to "(Edit)", edit_deck_path(deck)
+    %br
+  = link_to "New Deck", new_deck_path 

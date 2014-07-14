@@ -1,32 +1,40 @@
-#dashboard
-	%h1 Teacher Dashboard
-	.what-to-do
-		%p Here's what you need to prepare a conversation deck:
-		%ol
-			%li
-				Create a #{link_to "new word deck", new_deck_path} or #{link_to "use one of our decks", decks_path}.
-			%li
-				Take note of the name of your new deck.
-			%li
-				Have your students go to <strong>kaiwadeck.herokuapp.com/ktc</strong> and choose the deck you just made.
-		%strong That's it!
-	#buttons
-		= link_to "Create a New Deck", new_deck_path, :class => 'btn btn-success btn-xlg'
-		= link_to "Use one of our decks", decks_path, :class => 'btn btn-primary btn-xlg'
-	%hr
-	.row
-		.col-md-4
-			%h2 Decks You Created
-			%p Open a deck to test the cards inside.
-			- @user.decks.each do |deck|
-				= link_to "#{deck.name}", deck_path(deck)
-				(
-				= link_to "Edit", edit_deck_path(deck)
-				)
-		-# .col-md-7
-		-# 	%h2 Recently Used Decks
-		-# 	- @user.decks.each do |deck|
-		-# 		= link_to "#{deck.name}", deck_path(deck)
-		-# 		(
-		-# 		= link_to "Edit", edit_deck_path(deck)
-		-# 		)
+%section.page-top
+  .container
+    .row
+      .col-md-12
+        %h2 Teacher Dashboard
+.container
+  #dashboard
+    .what-to-do
+      %p Here's what you need to prepare a conversation deck:
+      %ol
+        %li
+          Create a #{link_to "new word deck", new_deck_path} or #{link_to "use one of our decks", decks_path}.
+        %li
+          Take note of the name of your new deck.
+        %li
+          Have your students go to <strong>kaiwadeck.herokuapp.com/ktc</strong> and choose the deck you just made.
+      %strong That's it!
+  #buttons
+    = link_to "Create a New Deck", new_deck_path, :class => 'btn btn-success btn-xlg'
+    = link_to "Use one of our decks", decks_path, :class => 'btn btn-primary btn-xlg'
+  %hr
+  .row
+    .col-md-4
+      %h2 Your Decks
+      - if @user.decks.count != 0
+        %p Open a deck to test the cards inside.
+        - @user.decks.each do |deck|
+          = link_to "#{deck.name}", deck_path(deck)
+          (
+          = link_to "Edit", edit_deck_path(deck)
+          )
+      - else
+        %p You haven't made any decks yet.  
+-# .col-md-7
+-# 	%h2 Recently Used Decks
+-# 	- @user.decks.each do |deck|
+-# 		= link_to "#{deck.name}", deck_path(deck)
+-# 		(
+-# 		= link_to "Edit", edit_deck_path(deck)
+-# 		)
