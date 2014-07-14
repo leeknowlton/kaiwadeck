@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'faker'
 gem 'fastclick-rails'
 gem 'devise'
+gem "font-awesome-rails"
 
 group :development do
   gem 'sqlite3'

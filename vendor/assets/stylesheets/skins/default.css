@@ -111,7 +111,7 @@ section.page-top.custom-product {
 	background-color: #0088cc;
 }
 
-.feature-box.secundary .feature-box-icon i.icon {
+.feature-box.secundary .feature-box-icon i.fa {
 	color: #0088cc;
 }
 
@@ -174,15 +174,15 @@ ul.list.icons li i {
 	color: #0088cc;
 }
 
-i.icon-featured {
+i.fa-featured {
 	background-color: #0088cc;
 }
 
-.parallax blockquote i.icon-quote-left {
+.parallax blockquote i.fa-quote-left {
 	color: #0088cc;
 }
 
-section.video blockquote i.icon-quote-left {
+section.video blockquote i.fa-quote-left {
 	color: #0088cc;
 }
 
@@ -277,7 +277,7 @@ blockquote.testimonial {
 	border-top-color: #0099e6;
 }
 
-.featured-box-secundary i.icon-featured {
+.featured-box-secundary i.fa-featured {
 	background-color: #0088cc;
 }
 

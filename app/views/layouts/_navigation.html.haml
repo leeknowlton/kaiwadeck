@@ -2,7 +2,10 @@
   %h1.logo
     .alternative-font
       KaiwaDeck
-  .navbar-collapse.nav-main-collapse.collapse
+  %button.btn.btn-responsive-nav.btn-inverse{"data-target" => ".nav-main-collapse", "data-toggle" => "collapse"}
+    %i.fa.fa-bars
+.navbar-collapse.nav-main-collapse.collapse
+  .container
     %nav.nav-main.mega-menu
       %ul#mainMenu.nav.nav-pills.nav-main
         - if user_signed_in?
@@ -14,4 +17,3 @@
             = link_to 'Sign Up', new_user_registration_path
           %li
             = link_to 'Sign In', new_user_session_path
-

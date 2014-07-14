@@ -794,11 +794,11 @@ ul.sitemap.list ul {
 	background: none;
 }
 
-.toggle > label i.icon-minus {
+.toggle > label i.fa-minus {
 	display: none;
 }
 
-.toggle > label i.icon-plus {
+.toggle > label i.fa-plus {
 	display: inline;
 }
 
@@ -841,11 +841,11 @@ ul.sitemap.list ul {
 	display: none;
 }
 
-.toggle.active i.icon-minus {
+.toggle.active i.fa-minus {
 	display: inline;
 }
 
-.toggle.active i.icon-plus {
+.toggle.active i.fa-plus {
 	display: none;
 }
 
@@ -1382,7 +1382,7 @@ body.boxed .pricing-table .plan, body.boxed .pricing-table h3 {
 }
 
 /* Primary */
-.featured-box-primary i.icon-featured {
+.featured-box-primary i.fa-featured {
 	background-color: #E36159;
 }
 
@@ -1395,7 +1395,7 @@ body.boxed .pricing-table .plan, body.boxed .pricing-table h3 {
 }
 
 /* Secundary */
-.featured-box-secundary i.icon-featured {
+.featured-box-secundary i.fa-featured {
 	background-color: #CCC;
 }
 
@@ -1408,7 +1408,7 @@ body.boxed .pricing-table .plan, body.boxed .pricing-table h3 {
 }
 
 /* Tertiary */
-.featured-box-tertiary i.icon-featured {
+.featured-box-tertiary i.fa-featured {
 	background-color: #2BAAB1;
 }
 
@@ -1421,7 +1421,7 @@ body.boxed .pricing-table .plan, body.boxed .pricing-table h3 {
 }
 
 /* Quartenary */
-.featured-box-quartenary i.icon-featured {
+.featured-box-quartenary i.fa-featured {
 	background-color: #734BA9;
 }
 
@@ -1485,7 +1485,7 @@ body.boxed .pricing-table .plan, body.boxed .pricing-table h3 {
 	height: 50px;
 }
 
-.feature-box.secundary .feature-box-icon i.icon {
+.feature-box.secundary .feature-box-icon i.fa {
 	font-size: 28px;
 }
 
@@ -2463,7 +2463,7 @@ h2 .word-rotate {
 }
 
 h2.word-rotator-title {
-	line-height: 54px;
+	line-height: 58px;
 }
 
 /* Scroll to Top */
