@@ -1,8 +1,9 @@
 :javascript
 	window.cardArray = #{raw @cards.to_json};
 
-#card
-	= @cards.first
+%h1
+	#card
+		= @cards.first
 #arrows
 	%a.btn.btn-default.btn-lg{:href =>"#", :id => "previousCard"}
 		%span.glyphicon.glyphicon-arrow-left

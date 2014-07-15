@@ -20,3 +20,4 @@
 // = require jquery.easing
 // = require bootstrap
 // = require jquery.validate
+// = require_tree .
