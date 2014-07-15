@@ -5,7 +5,7 @@
 	#card
 		= @cards.first
 #arrows
-	%a.btn.btn-default.btn-lg{:href =>"#", :id => "previousCard"}
-		%span.glyphicon.glyphicon-arrow-left
-	%a.btn.btn-default.btn-lg{:href =>"#", :id => "nextCard"}
-		%span.glyphicon.glyphicon-arrow-right
+	%a{:href =>"#", :id => "previousCard"}
+		%i.fa.fa-arrow-circle-left
+	%a{:href =>"#", :id => "nextCard"}
+		%i.fa.fa-arrow-circle-right

@@ -17,11 +17,13 @@ img {
 
 #arrows{
     text-align: center;
-  span.glyphicon-arrow-left {
-      font-size: 15vmin;
+  i.fa-arrow-circle-left {
+    font-size: 15vmin;
+    color: #777;
   }
-  span.glyphicon-arrow-right {
-      font-size: 15vmin;
+  i.fa-arrow-circle-right {
+    font-size: 15vmin;
+    color: #777;
   }
 
 }
